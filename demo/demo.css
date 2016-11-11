@@ -1,0 +1,19 @@
+:root {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.big {
+    font-size: 2.6em;
+    line-height: 1.8;
+    word-spacing: 0.25em;
+    
+    width: 23em;
+}
+
+.small {
+    font-size: 1.4em;
+    line-height: 1.8;
+    word-spacing: 0.25em;
+    
+    width: 23em;
+}

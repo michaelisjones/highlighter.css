@@ -1,7 +1,10 @@
+$svg-check: url('img/check.svg');
+$svg-cross: url('img/cross.svg');
+
 $highlighter-highlight-color-border: #000;
 $highlighter-highlight-color-background: #FFF;
 $highlighter-highlight-color-highlighted: #FF0;
-$highlighter-highlight-color-correct: #0F0;
+$highlighter-highlight-color-correct: #0c0;
 $highlighter-highlight-color-incorrect: #F00;
 
 $highlighter-highlight-margin: -0.2em;
@@ -11,7 +14,7 @@ $highlighter-highlight-margin: -0.2em;
     
     .word {        
         box-sizing: border-box;
-        
+        display: inline-block;
         position: relative;
     }
     
@@ -22,7 +25,8 @@ $highlighter-highlight-margin: -0.2em;
         margin: $highlighter-highlight-margin;
         box-sizing: border-box;
         
-        top: 0; right: 0; bottom: 0; left: 0;
+        top: 0.3em; bottom: 0.3em;
+        right: 0; left: 0;
         position: absolute;
     }
     
@@ -30,10 +34,11 @@ $highlighter-highlight-margin: -0.2em;
         z-index: -2;
     }
     .word:after {
-        z-index: 2;
+        padding: 0.05em;
         
-        border: 0.05em none $highlighter-highlight-color-border;
-        border-color: currentColor;
+        outline-color: $highlighter-highlight-color-border;
+        
+        z-index: 2;
     }
     
     .word:hover:before {
@@ -41,7 +46,9 @@ $highlighter-highlight-margin: -0.2em;
         z-index: -1;
     }
     .word:hover:after {
-        border-style: solid;
+        padding: 0;
+        outline-width: 0.06em;
+        outline-style: solid;
         z-index: 3;
     }
     
@@ -56,15 +63,33 @@ $highlighter-highlight-margin: -0.2em;
         border-bottom-width: 0.35em;
         border-bottom-color: $highlighter-highlight-color-correct;
     }
+    .word.correct:after {
+        background-size: 0.6em;
+        background-position: 100% 100%;
+        background-repeat: no-repeat;
+        background-image: $svg-check;
+    }
+    .word.correct:hover:after {
+        background-position: 100% 100%;
+    }
     
-    .word.incorrect:before {
+    .word.incorrect:before {        
         border-bottom-style: solid;
         border-bottom-width: 0.2em;
         border-bottom-color: $highlighter-highlight-color-incorrect;
         
-        background-size: 0.59594756em 1em;
-        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1.678"><path d="M1 1.678L0 0.839 1 0v1.678" fill="red"/></svg>');
-        background-repeat: repeat-y;
-        background-position: 100% 0;
+        background-size: 0.3em;
+        background-position: 50% 100%;
+        background-repeat: repeat-x;
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="34" height="20"><rect x="-1" y="-1" width="36" height="22" fill="none"/><path stroke="null" d="m26.9 26.9l-19.6-16.4 19.6-16.4 0 32.9" fill="red" transform="rotate(90 17,10) "/></svg>');
+    }
+    .word.incorrect:after {
+        background-size: 0.6em;
+        background-position: 100% 100%;
+        background-repeat: no-repeat;
+        background-image: $svg-cross;
+    }
+    .word.incorrect:hover:after {
+        background-position: 100% 100%;
     }
 }
