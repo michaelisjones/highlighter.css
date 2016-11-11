@@ -1,7 +1,70 @@
-.a {
-    color: blue;
+$highlighter-highlight-color-border: #000;
+$highlighter-highlight-color-background: #FFF;
+$highlighter-highlight-color-highlighted: #FF0;
+$highlighter-highlight-color-correct: #0F0;
+$highlighter-highlight-color-incorrect: #F00;
+
+$highlighter-highlight-margin: -0.2em;
+
+.highlighter {
+    position: relative;
     
-    :hover {
-        color: red;
+    .word {        
+        box-sizing: border-box;
+        
+        position: relative;
+    }
+    
+    .word:before,
+    .word:after {
+        content: '';
+        
+        margin: $highlighter-highlight-margin;
+        box-sizing: border-box;
+        
+        top: 0; right: 0; bottom: 0; left: 0;
+        position: absolute;
+    }
+    
+    .word:before {
+        z-index: -2;
+    }
+    .word:after {
+        z-index: 2;
+        
+        border: 0.05em none $highlighter-highlight-color-border;
+        border-color: currentColor;
+    }
+    
+    .word:hover:before {
+        background-color: $highlighter-highlight-color-background;
+        z-index: -1;
+    }
+    .word:hover:after {
+        border-style: solid;
+        z-index: 3;
+    }
+    
+    .word.highlighted:before {
+        background-color: $highlighter-highlight-color-highlighted;
+        border-bottom-style: solid;
+        border-bottom-width: 0.2em;
+    }
+    
+    .word.correct:before {
+        border-bottom-style: solid;
+        border-bottom-width: 0.35em;
+        border-bottom-color: $highlighter-highlight-color-correct;
+    }
+    
+    .word.incorrect:before {
+        border-bottom-style: solid;
+        border-bottom-width: 0.2em;
+        border-bottom-color: $highlighter-highlight-color-incorrect;
+        
+        background-size: 0.59594756em 1em;
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1.678"><path d="M1 1.678L0 0.839 1 0v1.678" fill="red"/></svg>');
+        background-repeat: repeat-y;
+        background-position: 100% 0;
     }
 }
