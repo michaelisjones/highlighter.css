@@ -1,8 +1,10 @@
 # highlighter.css
 
-CSS classes for highlighted-text effects. CSS files in `dist` folder: `highlighter.css` or `highlighter.min.css`
+CSS classes for highlighted-text effects.
 
 ## Usage
+
+The CSS files in the `dist` folder are compiled and ready to use: `highlighter.css` or `highlighter.min.css`.
 
 ### Recommended Font Properties
 
