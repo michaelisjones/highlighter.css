@@ -1,3 +1,3 @@
 #!/bin/sh
 
-../sassc/bin/sassc ./src/$1 > ./dist/$2
+../sassc/bin/sassc ./src/highlighter.scss > ./dist/highlighter.css
