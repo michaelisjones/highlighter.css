@@ -32,6 +32,8 @@ word-spacing: 0.25em;
 
 See `demo/demo.html` for implementation example.
 
+HTML:
+
 ~~~
 <p class="highlighter">
     <span class="word">one</span>                       <!-- Word -->
@@ -42,10 +44,14 @@ See `demo/demo.html` for implementation example.
 </p>
 ~~~
 
+Browser:
+
 ![example](https://github.com/michaelisjones/highlighter.css/blob/master/demo/example.png)
 
 ## Build
 
-Build script requires [SassC](https://github.com/sass/sassc) executable. Alternatively, SCSS source can be built using [SassMeister](http://www.sassmeister.com/).
+There is no need to compile the SCSS source code in the `src` folder unless you wish to modify it. You can use the already-compiled CSS files in the `dist` folder.
 
-CSS output minified (.min.css) using [cssnano](http://cssnano.co/).
+The `build.sh` script in the `scripts` folder requires [SassC](https://github.com/sass/sassc). Alternatively, the SCSS source can be compiled using [SassMeister](http://www.sassmeister.com/).
+
+CSS output is minified (.min.css) using [cssnano](http://cssnano.co/).
