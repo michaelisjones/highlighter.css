@@ -28,6 +28,8 @@ See `demo/demo.html` for implementation example.
 </p>
 ~~~
 
+![example](https://github.com/michaelisjones/highlighter.css/blob/master/demo/example.png)
+
 ## Build
 
 Build script requires [SassC](https://github.com/sass/sassc) executable. Alternatively, SCSS source can be built using [SassMeister](http://www.sassmeister.com/).
