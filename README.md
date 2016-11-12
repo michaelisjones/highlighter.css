@@ -6,17 +6,6 @@ CSS classes for highlighted-text effects.
 
 The CSS files in the `dist` folder are compiled and ready to use: `highlighter.css` or `highlighter.min.css`.
 
-### Recommended Font Properties
-
-These classes do not set any font properties. Here are the recommended font properties for best outcomes:
-
-~~~
-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-line-height: 1.8;
-word-spacing: 0.25em;
-~~~
-
-
 ### Classes
 
 **.highlighter** – Required class on parent element.
@@ -28,6 +17,16 @@ word-spacing: 0.25em;
 **.word.correct** – A correct word.
 
 **.word.incorrect** – An incorrect word.
+
+### Recommended Font Properties
+
+These classes do not set any font properties. Here are the recommended font properties for best outcomes:
+
+~~~
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+line-height: 1.8;
+word-spacing: 0.25em;
+~~~
 
 ## Example
 
