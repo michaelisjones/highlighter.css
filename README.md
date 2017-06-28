@@ -46,7 +46,7 @@ HTML:
 
 Browser:
 
-![example](https://github.com/michaelisjones/highlighter.css/blob/master/demo/example.png)
+![example](https://github.com/srilq/highlighter.css/blob/master/demo/example.png)
 
 ## Build
 
